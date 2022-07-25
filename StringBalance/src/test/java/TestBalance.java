@@ -18,10 +18,32 @@ public class TestBalance {
 		
 		assertEquals(true,balance.isBalance(input));
 	}
+	
+	@Test
+	public void When_StringhasSameSetOfOpenAndCloseBrackets_Expect_true()
+	{
+		String input = "({})";
+		
+		assertEquals(true,balance.isBalance(input));
+	}
 	@Test
 	public void When_StringHasDifferentSetOfOpenAndCloseBrackets_Expect_true()
 	{
-		String input = "()}";
+		String input = "(][";
+		
+		assertEquals(false,balance.isBalance(input));
+	}
+	@Test
+	public void When_StringhasDifferentSetOfOpenAndCloseBrackets_Expect_true()
+	{
+		String input = "(][){}";
+		
+		assertEquals(false,balance.isBalance(input));
+	}
+	@Test
+	public void When_StringIsEmpty_Expect_false()
+	{
+		String input = "";
 		
 		assertEquals(false,balance.isBalance(input));
 	}
