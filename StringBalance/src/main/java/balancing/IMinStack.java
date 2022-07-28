@@ -1,7 +1,9 @@
 package balancing;
 
 
-public interface IMinStack {
+public interface IMinStack 
+{
+	
 	
 	public  void push(char data);
 	public  char top();
@@ -10,4 +12,5 @@ public interface IMinStack {
     public  int size();  
     public  boolean isEmpty();
 
+    
 }
