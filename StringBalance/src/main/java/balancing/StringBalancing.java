@@ -1,12 +1,13 @@
 package balancing;
 
+
 import java.util.Scanner;
 
 public class StringBalancing {
 	
 	public boolean isBalance(String value) {
 		
-		MinStack minstack = new MinStack();
+		MinStackImpl minstack = new MinStackImpl();
 		 for(int i=0; i< value.length();i++)
 		 {
 			 if(value.charAt(i) == '(' || value.charAt(i)=='{' || value.charAt(i)=='[')
@@ -30,15 +31,5 @@ public class StringBalancing {
 		 else
 			 return false;
 	}
-	
-	public static void main(String[] args) {
-	 
-		StringBalancing bal = new StringBalancing();
-	     boolean result = bal.isBalance("{}()");
-	
-	    if(result == true)
-	    	System.out.println("true");
-	    else
-	    	System.out.println("false");	
-}
+
 }
